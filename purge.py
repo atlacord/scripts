@@ -23,7 +23,7 @@ async def purge():
     bans = [entry async for entry in guild.bans(limit=2000)]
     for ban in bans:
         if ban.user.id in ignored_members:
-            print(f'Ignoring {ban.user}.')
+            print(f'Ignoring {ban.user}, they will not be unbanned.')
         guild.unban(ban.user, 'Given another chance to appeal.')
 
 client.run(TOKEN)
