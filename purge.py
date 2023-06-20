@@ -18,6 +18,7 @@ async def on_ready():
     await purge()
 
 async def purge():
+    # Fetches bans from the Lake Laogai server, and unbans all users who are not part of the Ignored Member list.
     guild = client.get_guild(736344840253472830)
     print(guild)
     bans = [entry async for entry in guild.bans(limit=2000)]
