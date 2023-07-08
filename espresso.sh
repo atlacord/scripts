@@ -4,6 +4,7 @@
 api=https://papermc.io/api/v2
 name=paper
 version=1.19.4
+memory=8G
 
 # Get the build number of the most recent build
 latest_build="$(curl -sX GET "$api"/projects/"$name"/versions/"$version"/builds -H 'accept: application/json' | jq '.builds [-1].build')"
@@ -21,4 +22,4 @@ mv "$name"-"$version"-"$latest_build".jar paper.jar
 echo "Successfully updated Paper! Starting server."
 
 # Start server instance
-java -Xms3G -Xmx3G -jar paper.jar --nogui
+java -Xms$memory -Xmx$memory -jar paper.jar --nogui
