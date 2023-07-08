@@ -22,4 +22,4 @@ mv "$name"-"$version"-"$latest_build".jar paper.jar
 echo "Successfully updated Paper! Starting server."
 
 # Start server instance
-java -Xms$memory -Xmx$memory -jar paper.jar --nogui
+java -Xms"$memory" -Xmx"$memory" -jar paper.jar --nogui
