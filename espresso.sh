@@ -3,7 +3,7 @@
 #!/bin/bash
 api=https://papermc.io/api/v2
 name=paper
-version=1.19.4
+version=1.20.4
 memory=8G
 
 # Get the build number of the most recent build
